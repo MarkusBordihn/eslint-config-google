@@ -9,7 +9,8 @@
     "node": ">=0.20.0"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "upgrade": "npx npm-check -u --skip-unused && npm install && npm update && npm prune && npm audit fix"
   },
   "files": [
     "index.js"
@@ -35,7 +36,7 @@
     "hint"
   ],
   "devDependencies": {
-    "eslint": "^9.0.0"
+    "eslint": "^9.27.0"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0"
